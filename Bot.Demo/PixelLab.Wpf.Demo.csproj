@@ -353,7 +353,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
     <Resource Include="logo.png" />
     <None Include="icon.ico" />
   </ItemGroup>
@@ -370,6 +369,9 @@
       <Project>{5F336B0C-827C-4E1B-B0FF-53EC17B299A1}</Project>
       <Name>PixelLab.Core</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Prism" Version="4.1.0" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
