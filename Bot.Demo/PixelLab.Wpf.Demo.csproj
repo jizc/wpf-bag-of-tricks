@@ -1,204 +1,22 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
   <PropertyGroup>
-    <ProjectGuid>{17C607ED-D20B-45A7-98D6-7A955F62108A}</ProjectGuid>
-    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <RootNamespace>PixelLab.Wpf.Demo</RootNamespace>
-    <AssemblyName>PixelLab.Wpf.Demo</AssemblyName>
-    <OutputType>winexe</OutputType>
-  </PropertyGroup>
-  <Import Project="..\targets\NET4.targets" />
-  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
     <ApplicationIcon>icon.ico</ApplicationIcon>
   </PropertyGroup>
+
   <ItemGroup>
-    <Reference Include="Microsoft.Expression.Interactions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Prism.4.1.0.0\lib\NET40\Microsoft.Expression.Interactions.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Practices.Prism, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Prism.4.1.0.0\lib\NET40\Microsoft.Practices.Prism.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Practices.Prism.Interactivity, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Prism.4.1.0.0\lib\NET40\Microsoft.Practices.Prism.Interactivity.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\CommonServiceLocator.1.0\lib\NET35\Microsoft.Practices.ServiceLocation.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.Xaml.Tools">
       <HintPath>..\lib\Microsoft.Xaml.Tools.dll</HintPath>
     </Reference>
-    <Reference Include="System" />
-    <Reference Include="System.ComponentModel.Composition" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Windows.Interactivity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Prism.4.1.0.0\lib\NET40\System.Windows.Interactivity.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Xaml" />
-    <Reference Include="System.Xml" />
-    <Reference Include="UIAutomationProvider" />
-    <Reference Include="WindowsBase" />
-    <Reference Include="PresentationCore" />
-    <Reference Include="PresentationFramework" />
   </ItemGroup>
-  <ItemGroup>
-    <ApplicationDefinition Include="App.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </ApplicationDefinition>
-    <Compile Include="App.xaml.cs">
-      <DependentUpon>App.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Core\IsStringEmptyConverter.cs" />
-    <Compile Include="Core\SampleImageHelper.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Page Include="Hex\HexPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Compile Include="Core\DemoMetadata.cs" />
-    <Compile Include="Core\DemoMetadataAttribute.cs" />
-    <Compile Include="Core\DemoMetadataProperties.cs" />
-    <Compile Include="Core\XamlComponent.cs" />
-    <Compile Include="DemoCollection.cs" />
-    <Compile Include="FolderPicker\LocalDrives.cs" />
-    <Compile Include="FolderPicker\SelectableDirectory.cs" />
-    <Compile Include="Hex\Hexagon.cs" />
-    <Compile Include="Hex\HexBoardElement.cs" />
-    <Compile Include="Hex\HexHelper.cs" />
-    <Compile Include="Hex\HexStuff.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Page Include="MineSweeper\MineSweeperPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Compile Include="MainPage.xaml.cs">
-      <DependentUpon>MainPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="MineSweeper\MineFieldElement.cs" />
-    <Compile Include="MineSweeper\MineSweeper.cs" />
-    <Compile Include="MineSweeper\MineSweeperPage.xaml.cs">
-      <DependentUpon>MineSweeperPage.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <Page Include="TreeMapPanelPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="TreeViewDoubleClickPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Compile Include="TreeMapPanelPage.xaml.cs">
-      <DependentUpon>TreeMapPanelPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="TreeViewDoubleClickPage.xaml.cs">
-      <DependentUpon>TreeViewDoubleClickPage.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <Page Include="VisualTreeViewer\VisualTreeViewerPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Compile Include="TreeViewHelperClasses\TreeViewDataItem.cs" />
-    <Compile Include="VisualTreeViewer\VisualTreeItem.cs" />
-    <Compile Include="VisualTreeViewer\VisualTreeViewerPage.xaml.cs">
-      <DependentUpon>VisualTreeViewerPage.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-  </ItemGroup>
+
   <ItemGroup>
     <Resource Include="FolderPicker\drive.png" />
-    <Page Include="FolderPicker\FolderPickerPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Compile Include="FolderPicker\ChildSelection.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="ColorPicker\Code.cs" />
-    <Page Include="ColorPicker\ColorPickerPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="NumericUpDownPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="VSCopyToHtmlPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="XamlShirt.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="InfoTextBoxPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="RadioButtonListPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="TreeViewHelperClasses\DataTree.cs" />
-    <Compile Include="TreeViewHelperClasses\TreeViewHelperPage.xaml.cs">
-      <DependentUpon>TreeViewHelperPage.xaml</DependentUpon>
-    </Compile>
-    <Page Include="TreeViewHelperClasses\TreeViewHelperPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-  </ItemGroup>
-  <ItemGroup>
-    <Page Include="BlockBarPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-  </ItemGroup>
-  <ItemGroup>
-    <Page Include="KevinButton\KevinButtonPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Resource Include="KevinButton\disabled.jpg" />
     <Resource Include="KevinButton\down.jpg" />
     <Resource Include="KevinButton\downleft.jpg" />
@@ -211,167 +29,19 @@
     <Resource Include="KevinButton\up.jpg" />
     <Resource Include="KevinButton\upleft.jpg" />
     <Resource Include="KevinButton\upright.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Page Include="Graph\GraphPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Compile Include="Graph\GraphPage.xaml.cs">
-      <DependentUpon>GraphPage.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Graph\NodeClasses.cs" />
-    <Page Include="ListPagerPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Compile Include="ListPagerPage.xaml.cs">
-      <DependentUpon>ListPagerPage.xaml</DependentUpon>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <Page Include="AnimatingTilePanelPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="FlipTile3D\FlipTile3DPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Interactive3DPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="IntroductionPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="MainPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="NotifyWorkerPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="OrgTree\OrgTreePage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="ReorderListBoxPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="RevealPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Set\SetPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="ShowElementPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="TransitionPresenter\TransitionPresenterPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Resource Include="TransitionPresenter\star.png" />
-    <Page Include="ZapPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Compile Include="AnimatingTilePanelPage.xaml.cs">
-      <DependentUpon>AnimatingTilePanelPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="FlipTile3D\FlipTile3D.cs" />
-    <Compile Include="FlipTile3D\FlipTile.cs" />
-    <Compile Include="Interactive3DPage.xaml.cs">
-      <DependentUpon>Interactive3DPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="NotifyWorkerPage.xaml.cs">
-      <DependentUpon>NotifyWorkerPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="OrgTree\OrgData.cs" />
-    <Compile Include="OrgTree\OrgTreePage.xaml.cs">
-      <DependentUpon>OrgTreePage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="OrgTree\OrgView.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ReorderListBoxPage.xaml.cs">
-      <DependentUpon>ReorderListBoxPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Set\Set.cs" />
-    <Compile Include="Set\SetBoardElement.cs" />
-    <Compile Include="Set\SetCardDrawingFactory.cs" />
-    <Compile Include="Set\SetPage.xaml.cs">
-      <DependentUpon>SetPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="ShowElementPage.xaml.cs">
-      <DependentUpon>ShowElementPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="TransitionPresenter\TransitionPresenterPage.xaml.cs">
-      <DependentUpon>TransitionPresenterPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="VSCopyToHtmlPage.xaml.cs">
-      <DependentUpon>VSCopyToHtmlPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="ZapPage.xaml.cs">
-      <DependentUpon>ZapPage.xaml</DependentUpon>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="logo.png" />
-    <None Include="icon.ico" />
   </ItemGroup>
+
   <ItemGroup>
-    <ProjectReference Include="..\Bot\PixelLab.Wpf.csproj">
-      <Project>{E835A348-A6D1-4423-B749-0006B5700C35}</Project>
-      <Name>PixelLab.Wpf</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Common\PixelLab.Common.csproj">
-      <Project>{197F9FE2-E446-48FE-9A51-114918153426}</Project>
-      <Name>PixelLab.Common</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Core\PixelLab.Core.csproj">
-      <Project>{5F336B0C-827C-4E1B-B0FF-53EC17B299A1}</Project>
-      <Name>PixelLab.Core</Name>
-    </ProjectReference>
+    <ProjectReference Include="..\Bot\PixelLab.Wpf.csproj" />
+    <ProjectReference Include="..\Common\PixelLab.Common.csproj" />
+    <ProjectReference Include="..\Core\PixelLab.Core.csproj" />
   </ItemGroup>
+
   <ItemGroup>
     <PackageReference Include="Prism" Version="4.1.0" />
+    <PackageReference Include="System.ComponentModel.Composition" Version="5.0.0" />
   </ItemGroup>
-  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+
 </Project>
