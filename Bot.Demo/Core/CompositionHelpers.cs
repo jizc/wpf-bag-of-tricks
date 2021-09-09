@@ -3,7 +3,7 @@ using System.ComponentModel.Composition.Hosting;
 using System.ComponentModel.Composition.Primitives;
 using System.Linq;
 
-namespace PixelLab.Common
+namespace PixelLab.Demo.Core
 {
     public class FunctionExportDefinition<T> : ExportDefinition
     {

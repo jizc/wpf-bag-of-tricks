@@ -6,8 +6,8 @@ using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Threading;
-using Microsoft.Practices.Prism.Commands;
 using PixelLab.Common;
+using PixelLab.Core;
 
 namespace PixelLab.Wpf.Demo.MineSweeper
 {

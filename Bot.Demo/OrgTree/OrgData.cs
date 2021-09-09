@@ -4,7 +4,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Windows.Input;
 using PixelLab.Common;
-using Microsoft.Practices.Prism.Commands;
+using PixelLab.Core;
 #if CONTRACTS_FULL
 using System.Diagnostics.Contracts;
 #else

@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using Microsoft.Practices.Prism.Commands;
 #if CONTRACTS_FULL
 using System.Diagnostics.Contracts;
 #else
@@ -9,6 +8,7 @@ using PixelLab.Contracts;
 #endif
 using System.Windows.Input;
 using PixelLab.Common;
+using PixelLab.Core;
 
 namespace PixelLab.Wpf.Demo
 {

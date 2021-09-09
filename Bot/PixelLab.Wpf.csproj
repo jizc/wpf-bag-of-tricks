@@ -8,10 +8,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Reference Include="PresentationFramework.Aero" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Compile Include="..\CommonAssemblyInfo.cs">
       <Link>Properties\CommonAssemblyInfo.cs</Link>
     </Compile>
@@ -20,10 +16,6 @@
   <ItemGroup>
     <ProjectReference Include="..\Common\PixelLab.Common.csproj" />
     <ProjectReference Include="..\Core\PixelLab.Core.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Prism" Version="4.1.0" />
   </ItemGroup>
 
 </Project>
